@@ -59,6 +59,8 @@ def do_the_login(u,p):
 def wrong_details(error):
     return render_template('wrong_details.html'), 403
 
+#This block of code has been reused from the Lab document-basic login details. It has been modified along with the html files.
+
 
 con = sqlite3.connect('Gifts.db')
 con.row_factory = sqlite3.Row
@@ -70,9 +72,13 @@ rows = cur.fetchall();
 def wishlist():     
     return render_template("wishlist.html",rows = rows)
 
+#For this block of code I have created the wishlist file which displays the data from the database Gifts.db along with pictures to represent the gifts.
+
 @app.route('/homepage')
 def homepage():
     return render_template("homepage.html", rows = rows)
+
+#This block of code takes the user to the homepage which is modified, I have added images into the html files along with a background image
 
 def show_the_add_form():
     return render_template('index.html',page=url_for('index'))
@@ -105,7 +111,8 @@ def students():
     rows = cur.fetchall();
 
     return render_template("index.html",rows = rows)
-
+#This block of code has been created to take the user to the event page so they can create an event. The code structure is identical with the one used for the giftlist and for th eusers
+#Although the guests can access the page, they can't create an event.
 
 
 
