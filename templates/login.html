@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+
+    <style>
+      body{
+          background-image: url("{{ url_for('static', filename='beauty.jpg') }}");
+      }
+    </style>
+     <div class="imgcontainer">
+    <img src="{{url_for('static', filename = 'image.jpg')}}" alt="Avatar" align = "left">
+  </div
+</head>
+<body>
+    <H1>Login</H1>
+    
+    <P>Please enter your usrname and password:</P>
+    <form action="{{page}}" method="post">
+      <label for="uname">Username:</label><br>
+      <input type="text" id="uname" name="uname" value="Mihaela"><br>
+      <label for="pwd">Password:</label><br>
+      <input type="text" id="pwd" name="pwd" value="Password"><br><br>
+      <input type="submit" value="Submit">
+    </form>     
+</body>
+</html>
+

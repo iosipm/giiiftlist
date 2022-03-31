@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>My perfect Wedding</title>
+  <style>
+      body{
+          background-image: url("{{ url_for('static', filename='beauty.jpg') }}");
+      }
+    </style>
+ 
+</head>
+<body>
+  
+<div class="content">
+    <h1 style="text-align: center">Event Manager</h1>
+    {% if event|length < 2 %}
+    <h4 style="text-align: center">You can create your own event below.</h4>
+    {% else %}
+     <table style="border:3px solid black;margin-left:0;margin-right:auto;padding:3px;border-spacing:25px;">
+        <tr>
+            <td>Event ID</td>
+            <td>Name</td>
+            <td>Date</td>
+         </thead>
+           
+        </tr>
+        {% for row in rows %}
+            <tr>
+                <td>{{ event.content }}</td>
+                <td>{{ event.date_created.date() }}</td>
+                <td>
+                    <a href="/delete/{{event.id}}">Delete</a>
+                    <br>
+                    <a href="/update/{{event.id}}">Update</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+
+    <div class="form">
+        <form action="/" method="POST">
+            <input type="text" name="content" id="content">
+            <input type="submit" value="Add Event">
+        </form>
+    </div>
+</div>
+</body>
+</html>

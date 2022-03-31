@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Register</title>
+<style>
+      body{
+          background-image: url("{{ url_for('static', filename='beauty.jpg') }}");
+      }
+    </style>
+<H1>Please register below.</H1>
+</head>
+<body>
+
+<form action="{{page}}" method="post"> <label for="uname">Username:</label><br>
+<input id="uname" name="uname" value="" type="text"><br>
+<label for="pwd">Password:</label><br>
+<input id="pwd" name="pwd" value="Password" type="text"><br>
+<br>
+<input value="Submit" type="submit"> </form>
+</div>
+</body>
+</html>

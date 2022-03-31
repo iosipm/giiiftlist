@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title> Your Perfect online Giftlist</title>
+
+     <H1>Wishlist for Becca and Lewis</H1> 
+
+   <style>
+      body{
+          background-image: url("{{ url_for('static', filename='beauty.jpg') }}");
+      }
+    </style>
+    </head>
+   <body>
+       <div class="row">
+  <div class="column">
+    <img src="{{url_for('static', filename = 'microwave.jpg')}}" alt="Avatar" class="avatar" align = "right", title = "Microwave">
+  </div>
+    <div class="column">
+    <img src="{{url_for('static', filename = 'plant.jpg')}}" alt="Avatar" class="avatar" align = "right", title = "House Plant">
+   
+  </div>
+    <div class="column">
+       
+    <img src="{{url_for('static', filename = 'washing.jpg')}}" alt="Avatar" class="avatar" align = "right", titles= "Washing machine">
+  </div>
+  <div class="column">
+    <img src="{{url_for('static', filename = 'pilloww.jpg')}}" alt="Avatar" class="avatar" align = "right", title="Pillows">
+  </div>
+      <table style="border:3px solid black;margin-left:0;margin-right:auto;padding:3px;border-spacing:25px;">
+         <thead>
+            <td>Gift_ID</td>
+            <td>Gift type</td>
+            <td>Quantity</td>
+            <td>Author</td>
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row['gift_id']}}</td>
+               <td>{{row['gift type']}}</td>	
+               <td>{{row['quantity']}}</td>
+               <td>{{row['author']}}</td>
+            </tr>
+         {% endfor %}
+         
+      </table>
+   </body>
+</html>
+             
