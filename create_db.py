@@ -25,7 +25,8 @@ def students(e):
     rows = cur.fetchall();
 
     return render_template('students.html', 'login.html')
-
+#This is the file from the lab. I have tried to run it but it wouldn't work, I could get 404 error. Therefore, for this particular file, I have thought about using the 
+#error handler. I have thought about returning the render template with the student timetable. Although is not the way to make it work, I have managed to fix the error
 
 
 
