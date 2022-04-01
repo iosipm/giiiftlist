@@ -60,6 +60,7 @@ def wrong_details(error):
     return render_template('wrong_details.html'), 403
 
 #This block of code has been reused from the Lab document-basic login details. It has been modified along with the html files.
+#I have linked a new database to it, alongside with the html file, index
 
 
 con = sqlite3.connect('Gifts.db')
