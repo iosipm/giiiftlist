@@ -111,8 +111,10 @@ def students():
     rows = cur.fetchall();
 
     return render_template("index.html",rows = rows)
-#This block of code has been created to take the user to the event page so they can create an event. The code structure is identical with the one used for the giftlist and for th eusers
-#Although the guests can access the page, they can't create an event.
+123	#This block of code has been created to take the user to the event page so they can create an event. The code structure is reused from the Basic data setup lab, it has been upgraded and modified.
+124	#Although the guests can access the page, they can't create an event.
+125	#Cur.fetchall fetches all the rows of a query while fetchone only fetches one row or none.
+
 
 
 
