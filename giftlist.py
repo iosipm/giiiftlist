@@ -118,6 +118,14 @@ def students():
 
 
 
+@app.errorhandler(404)
+def notfound(e):
+    
+    return render_template("404.html")
+
+#This 404 route takes the user to the 404 page that has been edited and personalised by me.
+
+
 
 
 
