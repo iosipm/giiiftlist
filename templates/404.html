@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>404 Not found</title>
+  <style>
+      body{
+          background-image: url("{{ url_for('static', filename='beauty.jpg') }}");
+      }
+    </style>
+
+<h1 style="text-align:right">Whooops!</h1>
+  <div class="imgcontainer">
+    <img src="{{url_for('static', filename = 'puppies.jpg')}}" alt="Avatar" class="avatar" align = "left">
+    <h1 style="text-align:right"></h1>
+  </div>
+ 
+
+   
+  
+  <h1 style="text-align:center;">Looks like what you're looking  for isnt't here!</h1>
+</head>
+
+<body>
+<h1 style="text-align:center;">But here's some puppies to cheer you up!</H1>
+
+
+
+</body>
+</html>
